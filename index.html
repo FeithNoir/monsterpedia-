@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monsterpedia - Enciclopedia Antigua</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fuentes para el look de enciclopedia antigua -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Sorts+Mill+Goudy:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-[#A1887F] shadow-lg sticky top-0 z-50 border-b-4 border-[#5D4037]">
+        <nav class="content-wrapper py-3 flex flex-col sm:flex-row justify-between items-center">
+            <a href="index.html"
+                class="font-title-main text-4xl text-[#f5e5c3] hover:text-white transition duration-200 mb-2 sm:mb-0">
+                Monsterpedia
+            </a>
+            <div class="space-x-3 sm:space-x-4 text-sm sm:text-base">
+                <a href="index.html" class="text-[#f5e5c3] hover:text-white transition duration-200">Inicio</a>
+                <a href="#all-monsters" class="text-[#f5e5c3] hover:text-white transition duration-200">Índice de
+                    Monstruas</a>
+                <a href="#submit" class="text-[#f5e5c3] hover:text-white transition duration-200">Sugerir Especie</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal: Todo en el Index -->
+    <main class="content-wrapper py-8 md:py-12 flex-grow">
+
+        <!-- Sección de Bienvenida (Opcional, puedes quitarla o integrarla de otra forma) -->
+        <section class="text-center mb-12">
+            <h1 class="font-title-main text-5xl md:text-6xl text-encyclopedia-title mb-4">Un Bestiario de Criaturas
+                Singulares</h1>
+            <p class="text-lg text-encyclopedia-accent max-w-2xl mx-auto">
+                Explorando los misterios y maravillas de las diversas especies de chicas monstruo que habitan lo
+                conocido y lo desconocido.
+            </p>
+        </section>
+
+        <!-- Contenedor del Tablón de Anuncios -->
+        <div class="bulletin-board">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+
+                <!-- Columna Izquierda: PERFIL de la Monstrua (Cartel en el tablón) -->
+                <aside class="lg:col-span-1 order-2 lg:order-1">
+                    <div class="paper-sheet-profile sticky top-24">
+                        <!-- sticky para que el perfil acompañe el scroll -->
+                        <div class="relative profile-image-container flex justify-center">
+                            <img src="https://via.placeholder.com/180x180/8D6E63/f5e5c3?text=Arpía" alt="Arpía Perfil"
+                                class="w-36 h-36 md:w-44 md:h-44 rounded-md border-2 border-[#795548] shadow-lg object-cover"
+                                style="filter: sepia(0.3) contrast(0.9) brightness(0.95);"> <!-- Efecto sepia leve -->
+                        </div>
+                        <h2 class="font-title-section text-3xl text-center text-encyclopedia-title mb-1">Aeriona
+                            Plumasol</h2>
+                        <p class="text-sm text-center text-encyclopedia-accent mb-5">(Arpía de las Cumbres Ventosas)</p>
+
+                        <h3 class="font-semibold text-xl text-encyclopedia-title mb-2 border-b border-[#c8bca8] pb-1">
+                            Datos de Especie</h3>
+                        <ul class="space-y-1.5 text-sm text-gray-700 mb-5">
+                            <li><strong>Especie:</strong> Arpía Común <em class="text-gray-600">(Harpyia vulgaris)</em>
+                            </li>
+                            <li><strong>Clasif.:</strong> Humanoide Aviana, Bestia Alada</li>
+                            <li><strong>Alineam.:</strong> Caótico Neutral (frecuente)</li>
+                            <li><strong>Amenaza:</strong> Media</li>
+                            <li><strong>Longevidad:</strong> 40-60 ciclos solares</li>
+                        </ul>
+
+                        <h3 class="font-semibold text-xl text-encyclopedia-title mb-3 border-b border-[#c8bca8] pb-1">
+                            Capacidades Notables</h3>
+                        <div class="space-y-2.5 text-sm">
+                            <div>
+                                <div class="flex justify-between mb-0.5">
+                                    <span class="font-medium text-gray-700">Vigor Físico</span>
+                                    <span class="text-encyclopedia-title">45/100</span>
+                                </div>
+                                <div class="stat-bar-bg">
+                                    <div class="stat-bar-fill stat-bar-strength" style="width: 45%;">45%</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-0.5">
+                                    <span class="font-medium text-gray-700">Destreza Aérea</span>
+                                    <span class="text-encyclopedia-title">85/100</span>
+                                </div>
+                                <div class="stat-bar-bg">
+                                    <div class="stat-bar-fill stat-bar-agility" style="width: 85%;">85%</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-0.5">
+                                    <span class="font-medium text-gray-700">Astucia Primitiva</span>
+                                    <span class="text-encyclopedia-title">60/100</span>
+                                </div>
+                                <div class="stat-bar-bg">
+                                    <div class="stat-bar-fill stat-bar-intellect" style="width: 60%;">60%</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-0.5">
+                                    <span class="font-medium text-gray-700">Encanto Vocal</span>
+                                    <span class="text-encyclopedia-title">70/100</span>
+                                </div>
+                                <div class="stat-bar-bg">
+                                    <div class="stat-bar-fill stat-bar-magic" style="width: 70%;">70%</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-0.5">
+                                    <span class="font-medium text-gray-700">Presencia Salvaje</span>
+                                    <span class="text-encyclopedia-title">55/100</span>
+                                </div>
+                                <div class="stat-bar-bg">
+                                    <div class="stat-bar-fill stat-bar-charm" style="width: 55%;">55%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-center text-gray-500 mt-4 italic">Valores promedio para la especie.</p>
+                    </div>
+                </aside>
+
+                <!-- Columna Derecha: ARTÍCULO (Hoja de papel en el tablón) -->
+                <article class="lg:col-span-2 paper-sheet order-1 lg:order-2">
+                    <header class="mb-6 text-center">
+                        <h1 class="font-title-main text-4xl md:text-5xl text-encyclopedia-title mb-2">
+                            Estudio sobre la Arpía
+                        </h1>
+                        <p class="text-sm text-encyclopedia-accent italic">
+                            Observaciones sobre la Harpyia vulgaris y sus costumbres.
+                        </p>
+                    </header>
+
+                    <div class="article-content"> <!-- Clase contenedora para estilos específicos del artículo -->
+                        <p class="text-lg mb-4">
+                            Las Arpías, criaturas de leyenda y realidad tangible, representan una fascinante amalgama de
+                            ferocidad aviar y forma humanoide. Comúnmente descritas con torso femenino y extremidades
+                            inferiores, alas y cabeza de ave rapaz, su presencia evoca tanto temor como admiración por
+                            su dominio de los cielos.
+                        </p>
+
+                        <figure class="my-6">
+                            <img src="https://via.placeholder.com/700x350/A1887F/f5e5c3?text=Esbozo+de+Arpía+en+Vuelo"
+                                alt="Bandada de Arpías" class="rounded-sm shadow-sm w-full border border-[#c8bca8]"
+                                style="filter: sepia(0.4) contrast(0.85);">
+                            <figcaption>Un esbozo rápido de una Arpía en pleno vuelo, capturado desde una distancia
+                                prudencial.</figcaption>
+                        </figure>
+
+                        <section>
+                            <h2>Etimología y Orígenes</h2>
+                            <p>
+                                El apelativo "Arpía" deriva del antiguo griego <strong>Ἅρπυια (Hárpyia)</strong>,
+                                significando "aquellas que arrebatan" o "raptoras veloces". Este nombre ilustra su
+                                naturaleza predadora y su asombrosa celeridad al descender sobre sus presas o
+                                infortunados viajeros que invaden su territorio.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2>Territorios Predilectos</h2>
+                            <p>
+                                Estas criaturas aladas demuestran una notable adaptabilidad, si bien muestran
+                                preferencia por parajes que les confieren superioridad táctica para la caza y la
+                                anidación. Entre sus dominios más frecuentes se cuentan:
+                            </p>
+                            <ul>
+                                <li><strong>Cumbres Montañosas y Riscos Escarpados:</strong> Ofrecen atalayas
+                                    inmejorables y refugios seguros para sus nidos.</li>
+                                <li><strong>Bosques Primigenios y Frondosos:</strong> Donde los altos doseles les
+                                    permiten acechar sigilosamente.</li>
+                                <li><strong>Litorales Rocosos e Islas Remotas:</strong> Zonas ricas en presas marinas y
+                                    aviares.</li>
+                            </ul>
+                            <p>Se sabe que evitan las vastas planicies, donde su ventaja aérea es menor, y los núcleos
+                                urbanos densos, aunque ciertas subespecies más astutas han sido avistadas en los tejados
+                                de antiguas ciudadelas.</p>
+                        </section>
+
+                        <section>
+                            <h2>Comportamiento y Sustento</h2>
+                            <p>
+                                Las Arpías son fundamentalmente <strong>carnívoras y cazadoras oportunistas</strong>. Su
+                                sustento varía con el entorno, incluyendo pequeños mamíferos, aves, peces y, en
+                                ocasiones, carroña si la necesidad apremia.
+                            </p>
+                            <blockquote>
+                                "El silbido del viento entre sus plumas es a menudo el único aviso antes de su raudo
+                                descenso. Un sonido que hiela la sangre de quienes conocen su significado." <br>–
+                                Crónicas del Erudito Elara.
+                            </blockquote>
+                            <p>
+                                Socialmente, forman pequeñas bandadas o "gritos", generalmente bajo la matriarca más
+                                experimentada. Son extremadamente territoriales. Su comunicación es una mezcla de
+                                chillidos penetrantes y, en algunas variantes, cantos de extraña y a veces peligrosa
+                                belleza.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2>Peculiaridades y Saberes</h2>
+                            <ul>
+                                <li><strong>Plumaje Codiciado:</strong> Sus plumas son valoradas por escribas y
+                                    hechiceros por sus propiedades aerodinámicas y resonancia elemental.</li>
+                                <li><strong>El Canto Arpío:</strong> Unas pocas pueden modular su voz en melodías
+                                    capaces de encantar o aturdir.</li>
+                                <li><strong>Visión Excepcional:</strong> Dotadas de una vista penetrante, pueden divisar
+                                    movimiento a leguas de distancia.</li>
+                                <li><strong>Nidos Curiosos:</strong> A menudo "decoran" sus nidos con objetos
+                                    brillantes, no por valor, sino por una atracción instintiva.</li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <footer class="mt-8 pt-4 border-t border-[#d7ccc8]">
+                        <p class="text-xs text-gray-600 italic">
+                            Las observaciones aquí presentadas son fruto de estudios compilados y pueden presentar
+                            variaciones regionales. Se recomienda cautela al aproximarse a especímenes salvajes.
+                        </p>
+                        <div class="mt-3">
+                            <span class="font-semibold text-sm text-gray-700">Archivado bajo:</span>
+                            <a href="#"
+                                class="ml-1.5 text-xs bg-[#e0d8c7] hover:bg-[#c8bca8] text-[#5D4037] px-2 py-0.5 rounded-sm transition">Arpía</a>
+                            <a href="#"
+                                class="ml-1.5 text-xs bg-[#e0d8c7] hover:bg-[#c8bca8] text-[#5D4037] px-2 py-0.5 rounded-sm transition">Bestia
+                                Alada</a>
+                            <a href="#"
+                                class="ml-1.5 text-xs bg-[#e0d8c7] hover:bg-[#c8bca8] text-[#5D4037] px-2 py-0.5 rounded-sm transition">Folclore
+                                Antiguo</a>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </div> <!-- Fin del Bulletin Board -->
+
+        <!-- Sección para más monstruas (como en la versión anterior, pero adaptada) -->
+        <section class="mt-16">
+            <h2 class="font-title-main text-4xl text-center text-encyclopedia-title mb-10">Otros Especímenes Catalogados
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tarjeta de Monstrua (Placeholder) -->
+                <div class="bg-[#A1887F] p-1 rounded-md shadow-lg transform hover:scale-105 transition-transform duration-300"
+                    style="border: 4px solid #5D4037;">
+                    <div class="paper-sheet !p-4"> <!-- Usamos !p-4 para sobrescribir el padding si es necesario -->
+                        <img src="https://via.placeholder.com/400x300/8D6E63/f5e5c3?text=Sirena+Esbozo" alt="Sirena"
+                            class="w-full h-48 object-cover rounded-sm mb-3 border border-[#c8bca8]"
+                            style="filter: sepia(0.3) contrast(0.9);">
+                        <h3 class="font-title-section text-2xl text-encyclopedia-title mb-1">Sirena de los Abismos</h3>
+                        <p class="text-sm text-gray-600 mb-2 leading-relaxed">Cautivadoras guardianas de las
+                            profundidades marinas, cuyos cantos arrastran a los marineros a un destino incierto.</p>
+                        <span
+                            class="inline-block bg-[#d7ccc8] text-[#5D4037] text-xs font-semibold px-2 py-0.5 rounded-sm">Acuática</span>
+                    </div>
+                </div>
+                <!-- Otra tarjeta placeholder -->
+                <div class="bg-[#A1887F] p-1 rounded-md shadow-lg transform hover:scale-105 transition-transform duration-300"
+                    style="border: 4px solid #5D4037;">
+                    <div class="paper-sheet !p-4">
+                        <img src="https://via.placeholder.com/400x300/8D6E63/f5e5c3?text=Dríade+Esbozo" alt="Dríade"
+                            class="w-full h-48 object-cover rounded-sm mb-3 border border-[#c8bca8]"
+                            style="filter: sepia(0.3) contrast(0.9);">
+                        <h3 class="font-title-section text-2xl text-encyclopedia-title mb-1">Dríade del Bosque
+                            Susurrante</h3>
+                        <p class="text-sm text-gray-600 mb-2 leading-relaxed">Espíritus arbóreos vinculados a la esencia
+                            misma de los bosques ancestrales, protectoras de la flora.</p>
+                        <span
+                            class="inline-block bg-[#d7ccc8] text-[#5D4037] text-xs font-semibold px-2 py-0.5 rounded-sm">Fey</span>
+                    </div>
+                </div>
+                <!-- Placeholder para una nueva entrada -->
+                <div class="bg-[#A1887F] p-1 rounded-md shadow-lg flex items-center justify-center"
+                    style="border: 4px solid #5D4037; min-height: 300px;">
+                    <div class="paper-sheet !p-4 text-center">
+                        <svg class="w-16 h-16 text-gray-400 mx-auto mb-3" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                            </path>
+                        </svg>
+                        <h3 class="font-title-section text-xl text-encyclopedia-accent">Nueva Entrada Próximamente</h3>
+                        <p class="text-xs text-gray-500">El conocimiento se expande...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#795548] mt-auto py-6 border-t-4 border-[#4E342E]">
+        <div class="content-wrapper text-center text-[#f5e5c3] text-sm">
+            <p class="font-title-main text-lg text-white mb-1">Monsterpedia</p>
+            <p>© Anno MMXXIII - Compendio de Criaturas Fantásticas.</p>
+            <p class="text-xs opacity-75">Todo el contenido es ficticio y para propósitos de demostración.</p>
+            <div class="mt-2 space-x-3">
+                <a href="#" class="hover:text-white">Sobre el Compilador</a>
+                <a href="#" class="hover:text-white">Protocolos de Estudio</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
